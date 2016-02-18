@@ -1,0 +1,71 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+a {
+    color:#b7b1a1;
+    text-decoration:none;    
+}
+
+a:hover {
+    color:#1E7ACE;
+}
+
+input, select,textarea {
+    padding:1px;
+    margin:2px;
+    font-size:11px;
+}
+input.button {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+
+}
+input.button:hover {
+	background: #f47c20;
+}
+input.button:active {
+	position: relative;
+	top: 1px;
+}
+#formwrapper {
+    width:450px;
+    margin:15px auto;
+    padding:20px;
+    text-align:center;
+    border:1px #1E7ACE solid;
+}
+
+fieldset {
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #1E7ACE;
+    background:#fff;
+}
+
+
+fieldset label {
+    float:left;
+    width:120px;
+    text-align:right;
+    padding:4px;
+    margin:1px;
+}
+
+fieldset div {
+    clear:left;
+    margin-bottom:2px;
+}
+
+.enter{ text-align:center;}
+.clear {
+    clear:both;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>search</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=GB18030">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/search.css" media="all" />
+  </head>
+  
+  <body>
+    <div id="header">
+		<ul>
+			<li><a href="index.html">home</a></li>
+			<li><a href="flowers.html">flowers</a></li>
+			<li class="selected"><a href="search.html">search</a></li>
+			<li><a href="login.html">login</a></li>
+			<li><a href="register.html">register</a></li>
+		</ul>
+		<div class="logo">
+			<a href="index.html"><img src="images/orchid_logo.jpg" alt="" /></a>
+		</div>
+	</div>
+	<div id="body">
+		<div class="about">
+			<h1>Search engine</h1>	
+				<form action="SearchServlet" method="post">	
+					<fieldset>
+						
+						<p><strong>
+							Search what you want.
+						</strong></p>
+						<div class="enter">
+						<table>
+							<tr>
+								<td width="400px">
+									<input type="text" class="search" id= "search" name="search"/>
+								</td>
+								<td>
+									<input type="submit" class="button" value="Search"/>
+								</td>
+							</tr>
+						</table>
+						</div>
+
+					</fieldset>
+				</form>
+		</div>
+	</div>
+	<div id="footer">
+		<div>
+			<div class="connect">
+				<h4>Follow us:</h4>
+				<ul>
+					<li class="facebook"><a href="#">facebook</a></li>
+					<li class="twitter"><a href="#">twitter</a></li>
+				</ul>
+			</div>
+			<p>Copyright &copy; 2016. All rights reserved.</p>
+		</div>
+	</div>
+  </body>
+</html>
