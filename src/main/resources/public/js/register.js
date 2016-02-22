@@ -1,7 +1,7 @@
 		function validate_username(){
 			var username = document.getElementById("username");
 			var name_ele = document.getElementById("username_ele");
-			if(username == ""){
+			if(username === ""){
 				name_ele.innerHTML="<font color='red'>X Can't be empty</font>";
 				return false;
 			}else{
@@ -12,7 +12,7 @@
 		function validate_password(){
 			var password = document.getElementById("password");
 			var password_ele = document.getElementById("password_ele");
-			if(password ==""){
+			if(password ===""){
 				password_ele.innerHTML="<font color='red'>X Can't be empty</font>";
 				return false;
 			}else{
@@ -25,7 +25,7 @@
 		function validate_address(){
 			var address = document.getElementById("address");
 			var address_ele = document.getElementById("address_ele");
-			if(address ==""){
+			if(address ===""){
 				address_ele.innerHTML="<font color='red'>X Can't be empty</font>";
 				return false;
 			}else{
@@ -40,7 +40,7 @@
 			var password = document.getElementById("password");
 			var confirm_password = document.getElementById("confirm_password");
 			var pw_ele = document.getElementById("pw_ele");
-			if(confirm_password == ""){
+			if(confirm_password === ""){
 				pw_ele.innerHTML="<font color='red'>X Can't be empty</font>";
 				return false;
 			}else{
@@ -58,7 +58,7 @@
 		function validate_tel(){
 			var tel = document.getElementById("tel");
 			var tel_ele = document.getElementById("tel_ele");
-			if(tel == ""){
+			if(tel === ""){
 				tel_ele.innerHTML="<font color='red'>X Can't be empty</font>";
 				return false;
 			}else{
@@ -77,7 +77,7 @@
 		function validate_email(){
 			var email =document.getElementById("email");
 			var email_ele = document.getElementById("email_ele");
-			if(email == ""){
+			if(email === ""){
 				email_ele.innerHTML="<font color='red'>X Can't be empty</font>";
 				return false;
 			}else{
