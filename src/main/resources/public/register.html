@@ -1,15 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 <html>
   <head>
     <title>register</title>
-	
-    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-    <meta http-equiv="description" content="this is my page">
-    <meta http-equiv="content-type" content="text/html; charset=GB18030">
-    
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="all" />
-  	<link rel="stylesheet" type="text/css" href="stylesheets/register.css" media="all" />
-	<script type="text/javascript" src="js/register.js"/></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="all">
+  	<link rel="stylesheet" type="text/css" href="stylesheets/register.css" media="all">
+	  <script type="text/javascript" src="js/register.js"/>
   </head>
 
   <body>
@@ -22,7 +20,7 @@
 			<li class="selected"><a href="register.html">register</a></li>
 		</ul>
 		<div class="logo">
-			<a href="index.html"><img src="images/orchid_logo.jpg" alt="" /></a>
+			<a href="index.html"><img src="images/orchid_logo.jpg" alt=""></a>
 		</div>
 	</div>
 	<div id="body">
@@ -31,7 +29,7 @@
 				<form action="RegisterServlet" method="post"
 					onsubmit="return check_form()">
 					<fieldset>
-						
+
 						<p><strong>
 							Please read our Conditions of Use and Privacy Notice before
 							register.
@@ -41,33 +39,33 @@
 								Username
 							</label>
 							<input type="text" name="username" id="username" value=""
-								size="20" maxlength="30" onblur="validate_username()" />
+								size="20" maxlength="30" onblur="validate_username()">
 							<label id="username_ele">
 								*
 							</label>
-							<br />
+							<br>
 						</div>
 						<div>
 							<label for="Email">
 								E-mail
 							</label>
 							<input type="text" name="email" id="email" value="" size="20"
-								maxlength="150" onblur="validate_email()" />
+								maxlength="150" onblur="validate_email()">
 							<label id="email_ele">
 								*
 							</label>
-							<br />
+							<br>
 						</div>
 						<div>
 							<label for="password">
 								Password
 							</label>
 							<input type="password" name="password" id="password" size="20"
-								maxlength="15" onblur="validate_password()" />
+								maxlength="15" onblur="validate_password()">
 							<label id="password_ele">
 								*
 							</label>
-							<br />
+							<br>
 						</div>
 						<div>
 							<label for="confirm_password">
@@ -75,11 +73,11 @@
 							</label>
 							<input type="password" name="confirm_password"
 								id="confirm_password" size="20" maxlength="15"
-								onblur="confirm_passwords()" />
+								onblur="confirm_passwords()">
 							<label id="pw_ele">
 								*
 							</label>
-							<br />
+							<br>
 
 						</div>
 						<div>
@@ -87,62 +85,60 @@
 								Address
 							</label>
 							<input type="text" name="address" id="address" value="" size="20"
-								maxlength="150" onblur="validate_address()" />
+								maxlength="150" onblur="validate_address()">
 							<label id="address_ele">
 								*
 							</label>
-							<br />
+							<br>
 						</div>
 						<div>
-							<label for="type">
+							<label>
 								Type
 							</label>
-							<input type="radio" name="type" id="type" value="individual" size="20" maxlength="15"
-								checked />
+							<input type="radio" name="type" value="individual" size="20" checked>
 							individual &nbsp;&nbsp;&nbsp;
-							<input type="radio" name="type" id="type" value="business" size="20" maxlength="15" />
+							<input type="radio" name="type" value="business" size="20">
 							business
 							<label id="type_ele">
 								*
 							</label>
-							<br />
+							<br>
 						</div>
-						
+
 						<div>
-							<label for="sex">
+							<label>
 								Gender
 							</label>
-							<input type="radio" name="sex" value="Male" size="20" maxlength="15"
-								checked />
+							<input type="radio" name="sex" value="Male" size="20" checked>
 							Male &nbsp;&nbsp;&nbsp;
-							<input type="radio" name="sex" value="Female" size="20" maxlength="15" />
+							<input type="radio" name="sex" value="Female" size="20">
 							Female
 							<label id="sex_ele">
 								(For individual)
 							</label>
-							<br />
+							<br>
 						</div>
 						<div>
-							<label for="cname">
+							<label>
 								Company name
 							</label>
 							<input type="text" name="cname" id="cname" value="" size="20"
-								maxlength="150" onblur="validate_cname()" />
+								maxlength="150" onblur="validate_cname()">
 							<label id="cname_ele">
 								(For business)
 							</label>
-							<br />
+							<br>
 						</div>
 						<div>
 							<label for="tel">
 								Telephone
 							</label>
 							<input type="text" name="tel" id="tel" size="20" maxlength="15"
-								onblur="validate_tel()" />
+								onblur="validate_tel()">
 							<label id="tel_ele">
 								*
 							</label>
-							<br />
+							<br>
 
 						</div>
 
@@ -151,15 +147,15 @@
 								Agree
 							</label>
 							<input type="checkbox" name="AgreeToTerms" id="AgreeToTerms"
-								value="1" />
+								value="1">
 							<label>
 							*
 							</label>
-							<a href="#" title="Conditions of Use and Privacy Notice.">Read？</a>
+							<a href="#" title="Conditions of Use and Privacy Notice.">Read锟斤拷</a>
 						</div>
 						<div class="enter">
-							<input type="submit" class="button" value="Submit" />
-							<input type="reset" class="button" value="Reset" />
+							<input type="submit" class="button" value="Submit">
+							<input type="reset" class="button" value="Reset">
 						</div>
 
 						<p>
