@@ -9,4 +9,5 @@ public class FlowerController {
         return flowerService.getAllFlowers();
       }
     });
+	}
 }
