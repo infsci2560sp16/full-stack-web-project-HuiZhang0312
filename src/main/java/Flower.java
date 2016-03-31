@@ -15,7 +15,7 @@ import com.heroku.sdk.jdbc.DatabaseUrl;
 
 public class Flower {
 
-  private void getFlower() {
+  public static void main(String[] args) {
 
     get("/flower", (req, res) -> "Flower");
 
