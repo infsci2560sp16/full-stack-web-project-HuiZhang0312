@@ -12,7 +12,7 @@ public class FlowerController {
         // process request
         return new Gson.toJson(flowerService.getAllFlowers());
       }
-    };
+    });
 
     // more routes
   }
