@@ -11,7 +11,7 @@
         <script>
             $(function () {
                 $.ajax({
-                    url: "/api/time/now.xml",
+                    url: "/hello",
                     success: function (result) {
                         var data = JSON.parse(result);
                         $("#current-time").html(data.currentTime);
