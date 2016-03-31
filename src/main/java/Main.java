@@ -20,7 +20,7 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
-    Object r = new Flower();
+    new FlowerController(new FlowerService);
 
     get("/hello", (req, res) -> "Hello World");
     get("/a", (req, res) -> "This is a");

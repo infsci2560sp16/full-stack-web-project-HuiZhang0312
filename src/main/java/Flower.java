@@ -1,24 +1,21 @@
-import java.sql.*;
-import java.util.HashMap;
-import java.util.ArrayList;
-import java.util.Map;
-
-import java.net.URI;
-import java.net.URISyntaxException;
-
-import static spark.Spark.*;
-import spark.template.freemarker.FreeMarkerEngine;
-import spark.ModelAndView;
-import static spark.Spark.get;
-
-import com.heroku.sdk.jdbc.DatabaseUrl;
 
 public class Flower {
-
-  public static void main(String[] args) {
-
-    get("/flower", (req, res) -> "Flower");
-
-  }
-
+	private String id;
+	private String name;
+	public Flower(String id,String name){
+		this.id = id;
+		this.name = name;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
 }
