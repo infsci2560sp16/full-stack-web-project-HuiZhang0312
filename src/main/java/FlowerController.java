@@ -1,6 +1,6 @@
 import static spark.Spark.*;
 import spark.*;
-import JsonUtil.*;
+import com.google.gson.Gson;
 
 public class FlowerController {
 
@@ -10,9 +10,9 @@ public class FlowerController {
       @Override
       public Object handle(Request request, Response response) {
         // process request
-        return flowerService.getAllFlowers();
+        return new Gson.toJson(flowerService.getAllFlowers());
       }
-    },json());
+    };
 
     // more routes
   }
