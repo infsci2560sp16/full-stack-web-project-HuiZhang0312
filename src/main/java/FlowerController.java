@@ -1,4 +1,5 @@
-package main;
+import static spark.Spark.*;
+import spark.*;
 
 public class FlowerController {
 	public FlowerController(final FlowerService flowerService) {
