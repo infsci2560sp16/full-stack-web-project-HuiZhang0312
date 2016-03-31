@@ -20,9 +20,11 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
+    Object r = new Flower();
+
     get("/hello", (req, res) -> "Hello World");
     get("/a", (req, res) -> "This is a");
-    post("/b", (req, res) -> "This is b");
+    //post("/b", (req, res) -> "This is b");
 
 
     /*get("/", (request, response) -> {
