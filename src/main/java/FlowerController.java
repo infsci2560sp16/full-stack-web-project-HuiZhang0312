@@ -11,7 +11,7 @@ public class FlowerController {
         // process request
         return flowerService.getAllFlowers();
       }
-    });
+    },json());
 
     // more routes
   }
