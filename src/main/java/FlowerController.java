@@ -10,7 +10,7 @@ public class FlowerController {
       @Override
       public Object handle(Request request, Response response) {
         // process request
-        return new Gson.toJson(flowerService.getAllFlowers());
+        return new Gson().toJson(flowerService.getAllFlowers());
       }
     });
 
