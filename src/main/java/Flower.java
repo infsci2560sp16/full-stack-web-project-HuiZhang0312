@@ -13,14 +13,11 @@ import static spark.Spark.get;
 
 import com.heroku.sdk.jdbc.DatabaseUrl;
 
-public class Test {
+public class Flower {
 
-  public static void main(String[] args) {
+  private void getFlower() {
 
-    port(Integer.valueOf(System.getenv("PORT")));
-    staticFileLocation("/public");
-
-    get("/a", (req, res) -> "a");
+    get("/flower", (req, res) -> "Flower");
 
   }
 
