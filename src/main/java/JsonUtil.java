@@ -1,3 +1,6 @@
+import static spark.Spark.*;
+import spark.*;
+
 public class JsonUtil {
 
   public static String toJson(Object object) {
