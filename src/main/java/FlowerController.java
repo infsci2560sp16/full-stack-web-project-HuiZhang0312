@@ -2,7 +2,17 @@ import static spark.Spark.*;
 import spark.*;
 
 public class FlowerController {
-	public FlowerController(final FlowerService flowerService) {
-    get("/flowers", (req, res) -> {flowerService.getAllFlowers();});
-	}
+
+  public FlowerController(final FlowerService flowerService) {
+
+    get("/flowers", new Route() {
+      @Override
+      public Object handle(Request request, Response response) {
+        // process request
+        return flowerService.getAllFlowers();
+      }
+    });
+
+    // more routes
+  }
 }
