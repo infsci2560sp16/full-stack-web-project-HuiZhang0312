@@ -5,14 +5,14 @@
         <meta charset="UTF-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script>
-        $(function() {
+        $(function getJson() {
           $.ajax({
             url : "/flowers",
             success : function(result) {
               var flowers = JSON.parse(result);
               for ( var i = 0; i < flowers.length; i++) {
                 $("div.flowers").append(
-                  '<p class="question" id="' + flowers[i].id + '">'+ flowers[i].id + '&nbsp;&nbsp;' flowers[i].name + '</p>' + '<br/>'
+                  '<p class="question" id="' + flowers[i].id + '">' + flowers[i].name + '</p>' + '<br/>'
                 );
               }
             }
@@ -21,6 +21,7 @@
         </script>
     </head>
     <body>
+        <input type="button" value="GetJson" onclick="getJson()">
         <div class="flowers"></div>
     </body>
 </html>
