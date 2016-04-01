@@ -11,8 +11,10 @@
             success : function(result) {
               var flowers = JSON.parse(result);
               for ( var i = 0; i < flowers.length; i++) {
-                $("div.flowers").append(
-                  '<p class="question" id="' + flowers[i].id + '">' + flowers[i].name + '</p>' + '<br/>'
+                $("table.flowers").append(
+                  '<tr>'+
+                  '<td>'+ flowers[i].id '</td><td>'+ flowers[i].name + '</td>'+
+                  '</tr>'
                 );
               }
             }
@@ -22,6 +24,8 @@
     </head>
     <body>
         <input type="button" value="GetJson" onclick="getJson()">
-        <div class="flowers"></div>
+        <table class="flowers">
+
+        </table>
     </body>
 </html>
