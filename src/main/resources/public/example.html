@@ -10,23 +10,17 @@
             url : "/flowers",
             success : function(result) {
               var flowers = JSON.parse(result);
-              $("div.flowers").append('<table>');
               for ( var i = 0; i < flowers.length; i++) {
                 $("div.flowers").append(
-                  '<tr>'+
-                  '<td>'+ flowers[i].id '</td>'+
-                  '<td>'+ flowers[i].name + '</td>'+
-                  '</tr>'
+                  '<p class="question" id="' + flowers[i].id + '">'+ flowers[i].id + '&nbsp;&nbsp;' flowers[i].name + '</p>' + '<br/>'
                 );
               }
-              $("div.flowers").append('</table>');
             }
           });
         });
         </script>
     </head>
     <body>
-        <input type="button" value="GetJson" onclick="getJson()">
         <div class="flowers"></div>
     </body>
 </html>
