@@ -22,6 +22,43 @@ public class Main {
 
     new FlowerController(new FlowerService());
 
+    get("/about", (req, res) -> {
+
+          Connection connection = null;
+          // res.type("application/xml"); //Return as XML
+
+          Map<String, Object> attributes = new HashMap<>();
+          try {
+
+
+              String xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
+              xml += "<About>";
+
+                  xml += "<Branch>";
+                  xml += "<Name>Orchid Flower</Name>";
+                  xml += "<Profession>Retailer</Profession>";
+                  xml += "<Since>2016</Since>";
+                  xml += "<Country>United States</Country>";
+                  xml += "<State>Pennsylvania</State>";
+                  xml += "<City>Pittsburgh</City>";
+                  xml += "<OpenHour>9am-8pm</OpenHour>";
+                  xml += "<Phone>111-222-3333</Phone>";
+                  xml += "<Email>huz26@pitt.edu</Email>";
+                  xml += "<Address>4200 Fifth Ave</Address>";
+                  xml += "</Branch>";
+
+              xml += "</About>";
+              res.type("text/xml");
+              return xml;
+
+          } catch (Exception e) {
+              attributes.put("message", "There was an error: " + e);
+              return attributes;
+          } finally {
+              if (connection != null) try{connection.close();} catch(SQLException e){}
+          }
+      });
+
     get("/hello", (req, res) -> "Hello World");
     get("/a", (req, res) -> "This is a");
     //post("/b", (req, res) -> "This is b");
