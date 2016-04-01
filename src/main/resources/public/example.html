@@ -10,13 +10,16 @@
             url : "/flowers",
             success : function(result) {
               var flowers = JSON.parse(result);
+              $("div.flowers").append('<table>');
               for ( var i = 0; i < flowers.length; i++) {
-                $("table.flowers").append(
+                $("div.flowers").append(
                   '<tr>'+
-                  '<td>'+ flowers[i].id '</td><td>'+ flowers[i].name + '</td>'+
+                  '<td>'+ flowers[i].id '</td>'+
+                  '<td>'+ flowers[i].name + '</td>'+
                   '</tr>'
                 );
               }
+              $("div.flowers").append('</table>');
             }
           });
         });
@@ -24,8 +27,6 @@
     </head>
     <body>
         <input type="button" value="GetJson" onclick="getJson()">
-        <table class="flowers">
-
-        </table>
+        <div class="flowers"></div>
     </body>
 </html>
