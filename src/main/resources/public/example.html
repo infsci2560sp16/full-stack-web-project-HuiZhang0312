@@ -23,22 +23,39 @@
 			           url : "/about",
                  type : "get",
                  success : function(result) {
-                   person = result.getElementsByTagName("Branch");
+                   branch = result.getElementsByTagName("Branch");
                    $("div.about").append(
-	        	           '<p>Name:'+person[0].childNodes[0].firstChild.nodeValue+'</p>'+
-	        	           '<p>Profession:'+person[0].childNodes[1].firstChild.nodeValue+'</p>'+
-	        	           '<p>Since:'+person[0].childNodes[2].firstChild.nodeValue+'</p>'+
-                       '<p>Country:'+person[0].childNodes[3].firstChild.nodeValue+'</p>'+
-                       '<p>State:'+person[0].childNodes[4].firstChild.nodeValue+'</p>'+
-                       '<p>City:'+person[0].childNodes[5].firstChild.nodeValue+'</p>'+
-                       '<p>OpenHour:'+person[0].childNodes[6].firstChild.nodeValue+'</p>'+
-                       '<p>Phone:'+person[0].childNodes[7].firstChild.nodeValue+'</p>'+
-                       '<p>Email:'+person[0].childNodes[8].firstChild.nodeValue+'</p>'+
-                       '<p>Address:'+person[0].childNodes[9].firstChild.nodeValue+'</p>'
+	        	           '<p>Name:'+branch[0].childNodes[0].firstChild.nodeValue+'</p>'+
+	        	           '<p>Profession:'+branch[0].childNodes[1].firstChild.nodeValue+'</p>'+
+	        	           '<p>Since:'+branch[0].childNodes[2].firstChild.nodeValue+'</p>'+
+                       '<p>Country:'+branch[0].childNodes[3].firstChild.nodeValue+'</p>'+
+                       '<p>State:'+branch[0].childNodes[4].firstChild.nodeValue+'</p>'+
+                       '<p>City:'+branch[0].childNodes[5].firstChild.nodeValue+'</p>'+
+                       '<p>OpenHour:'+branch[0].childNodes[6].firstChild.nodeValue+'</p>'+
+                       '<p>Phone:'+branch[0].childNodes[7].firstChild.nodeValue+'</p>'+
+                       '<p>Email:'+branch[0].childNodes[8].firstChild.nodeValue+'</p>'+
+                       '<p>Address:'+branch[0].childNodes[9].firstChild.nodeValue+'</p>'
                      );
                    }
                  });
                }
+        function postJson(){
+          var username = $("#username").val();
+          var password = $("password").val();
+          var info = JSON.stringify({"username":username,"password":password});
+          $.ajax({
+            contentType:'application/json',
+            url : "/login",
+		        type : "post",
+		        dataType: "json",
+            data:info,
+            success : function(data){
+              alert(data);
+              alert("Register successfully.");
+              window.location.href='/index.html';
+            }
+          });
+        }
         </script>
     </head>
     <body>
@@ -46,5 +63,8 @@
         <div class="flowers"></div>
         <input type="button" value="GetXml" onclick="getXml()">
         <div class="about"></div>
+        <input type="text" id="username" size="30">
+        <input type="text" id="password" size="30">
+        <input type="button" value="login" onclick="postJson()">
     </body>
 </html>
