@@ -66,7 +66,7 @@ public class Main {
     //post("/b", (req, res) -> "This is b");
 
 
-    get("/about", (request, response) -> {
+    get("/aboutus", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("message", "Hello World!");
 
