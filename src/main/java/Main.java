@@ -81,6 +81,13 @@ public class Main {
         }, new FreeMarkerEngine());
 
     post("/login", (req, res) -> {
+              Map<String, Object> data = new HashMap<>();
+              data.put("username", "Colin");
+              data.put("password","aaa");
+              return data;
+          }, gson::toJson);
+
+    post("/register", (req, res) -> {
            Connection connection = null;
               try {
                   connection = DatabaseUrl.extract().getConnection();
