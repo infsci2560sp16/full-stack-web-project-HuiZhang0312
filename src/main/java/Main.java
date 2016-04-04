@@ -65,10 +65,16 @@ public class Main {
 
 
     get("/about", (request, response) -> {
+            Map<String, Object> attributes = new HashMap<>();
+            attributes.put("message", "Hello World!");
+
             return new ModelAndView(attributes, "about.ftl");
         }, new FreeMarkerEngine());
 
     get("/showflower", (request, response) -> {
+            Map<String, Object> attributes = new HashMap<>();
+            attributes.put("message", "Hello World!");
+
             return new ModelAndView(attributes, "showflower.ftl");
         }, new FreeMarkerEngine());
 
