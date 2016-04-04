@@ -4,8 +4,12 @@
     <title>Orchid Flower</title>
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="all">
+
+    <script type="text/javascript" src="js/index.js"></script>
 
   </head>
 
@@ -100,12 +104,14 @@
 				</div>
 				<ul>
 					<li>
-						<h3>First Title here</h3>
-						<p>Here is content one</p>
+						<h3>Get JSON</h3>
+            <input type="button" value="GetJson" onclick="getJson()">
+            <div class="flowers"></div>
 					</li>
 					<li>
-						<h3>Second Title here</h3>
-						<p>Here is content two.</p>
+						<h3>Get XML</h3>
+            <input type="button" value="GetXml" onclick="getXml()">
+            <div class="about"></div>
 					</li>
 					<li>
 						<h3>Third title three</h3>

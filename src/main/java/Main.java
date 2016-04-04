@@ -64,12 +64,37 @@ public class Main {
     //post("/b", (req, res) -> "This is b");
 
 
-    get("/test", (request, response) -> {
-            Map<String, Object> attributes = new HashMap<>();
-            attributes.put("message", "Hello World!");
-
+    get("/about", (request, response) -> {
             return new ModelAndView(attributes, "about.ftl");
         }, new FreeMarkerEngine());
+
+    get("/showflower", (request, response) -> {
+            return new ModelAndView(attributes, "showflower.ftl");
+        }, new FreeMarkerEngine());
+
+    post("/login", (req, res) -> {
+           Connection connection = null;
+              try {
+                  connection = DatabaseUrl.extract().getConnection();
+                  JSONObject obj = new JSONObject(req.body());
+                  String username = obj.getString("username");
+                  String password = obj.getString("password");
+
+                  String sql = "INSERT INTO User(username, email, password) VALUES ('"
+                                + username + "','" + password + "')";
+
+                  connection = DatabaseUrl.extract().getConnection();
+                  Statement stmt = connection.createStatement();
+                  stmt.executeUpdate("CREATE TABLE IF NOT EXISTS User");
+                  stmt.executeUpdate(sql);
+
+                 return req.body();
+                } catch (Exception e) {
+                  return e.getMessage();
+                } finally {
+
+                }
+              });
 
     get("/db", (req, res) -> {
       Connection connection = null;

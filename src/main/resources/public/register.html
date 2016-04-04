@@ -4,10 +4,36 @@
     <title>register</title>
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="all">
   	<link rel="stylesheet" type="text/css" href="stylesheets/register.css" media="all">
 	  <script type="text/javascript" src="js/register.js"></script>
+    <script>
+    function register(){
+      var username = $("#username").val();
+      var password = $("#password").val();
+      var email = $("email").val();
+      var info = JSON.stringify({"username":username,"email":email,"password":password});
+      alert(info);
+      $.ajax({
+        contentType:'application/json',
+        url : "/register",
+        type : "post",
+        dataType: "json",
+        data:info,
+        success : function(flowers){
+          for ( var i = 0; i < flowers.length; i++) {
+            $("div.flowers").append(
+              '<p class="question" id="' + flowers[i].id + '">' + flowers[i].name + '</p>' + '<br/>'
+            );
+          }
+          alert("register successfully.");
+          window.location.href='/index.html';
+        }
+      });
+    }
+    </script>
   </head>
 
   <body>
@@ -154,7 +180,7 @@
 							<a href="#" title="Conditions of Use and Privacy Notice.">Read��</a>
 						</div>
 						<div class="enter">
-							<input type="submit" class="button" value="Submit">
+							<input type="submit" class="button" value="Submit" onclick="register()">
 							<input type="reset" class="button" value="Reset">
 						</div>
 

@@ -3,10 +3,12 @@ function getJson(){
     url : "/flowers",
     success : function(result) {
       var flowers = JSON.parse(result);
-      for ( var i = 0; i < flowers.length; i++) {
-        $("div.flowers").append(
-          '<p class="question" id="' + flowers[i].id + '">' + flowers[i].name + '</p>' + '<br/>'
-        );
+      if(flowers.length>0){
+        for ( var i = 0; i < flowers.length; i++) {
+          $("div.flowers").append(
+            '<p class="question" id="' + flowers[i].id + '">' + flowers[i].name + '</p>' + '<br/>'
+          );
+        }
       }
     }
   });

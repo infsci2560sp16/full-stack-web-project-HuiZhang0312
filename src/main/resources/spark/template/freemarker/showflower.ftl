@@ -95,13 +95,13 @@
        </div>
        <ul>
          <li>
-           <h3>About Us(Get XML)</h3>
-           <input type="button" value="GetXml" onclick="getXml()">
-           <div class="about"></div>
+           <h3>Show Flowers(Get JSON)</h3>
+           <input type="button" value="GetJson" onclick="getJson()">
+           <div class="flowers"></div>
          </li>
          <li>
-           <h3>Third title three</h3>
-           <p>Here is content three.</p>
+           <h3>Second title two</h3>
+           <p>Here is content two.</p>
          </li>
        </ul>
      </div>

@@ -5,6 +5,8 @@
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="all">
 
   </head>
@@ -42,7 +44,10 @@
 				</ul>
 			</div>
 			<h3>Description of flowers</h3>
-				<p>Here is content of description</p>
+      <input type="button" value="GetJson" onclick="getJson()">
+      <div class="flowers"></div>
+      <input type="button" value="GetXml" onclick="getXml()">
+      <div class="about"></div>
 		</div>
 	</div>
 	<div id="footer">
