@@ -82,7 +82,7 @@ public class Main {
             return new ModelAndView(attributes, "showflower.ftl");
         }, new FreeMarkerEngine());
 
-    post("/login", (req, res) -> {
+    get("/login", (req, res) -> {
               Map<String, Object> data = new HashMap<>();
               data.put("username", "Colin");
               data.put("password","aaa");

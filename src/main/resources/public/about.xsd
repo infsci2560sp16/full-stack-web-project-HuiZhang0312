@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="Branch">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="Name" type="xsd:string"/>
+<xsd:element name="Profession" type="xsd:string" />
+<xsd:element name="Since" type="xsd:string"/>
+<xsd:element name="Country" type="xsd:string"/>
+<xsd:element name="State" type="xsd:string"/>
+<xsd:element name="City" type="xsd:string"/>
+<xsd:element name="OpenHour" type="xsd:string"/>
+<xsd:element name="Phone" type="xsd:string"/>
+<xsd:element name="Email" type="xsd:string"/>
+<xsd:element name="Address" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>

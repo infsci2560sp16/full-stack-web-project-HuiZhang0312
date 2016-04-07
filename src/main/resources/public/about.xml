@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<About xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="about.xsd">
+
+  <Branch>
+  <Name>Orchid Flower</Name>
+  <Profession>Retailer</Profession>
+  <Since>2016</Since>
+  <Country>United States</Country>
+  <State>Pennsylvania</State>
+  <City>Pittsburgh</City>
+  <OpenHour>9am-8pm</OpenHour>
+  <Phone>111-222-3333</Phone>
+  <Email>huz26@pitt.edu</Email>
+  <Address>4200 Fifth Ave</Address>
+  </Branch>
+
+</About>
