@@ -45,12 +45,12 @@ function postJson(){
     type : "post",
     dataType: "json",
     data:info,
-    success : function(flowers){
-      for ( var i = 0; i < flowers.length; i++) {
-        $("div.flowers").append(
-          '<p class="question" id="' + flowers[i].id + '">' + flowers[i].name + '</p>' + '<br/>'
-        );
-      }
+    success : function(){
+      //for ( var i = 0; i < flowers.length; i++) {
+      //  $("div.flowers").append(
+      //    '<p class="question" id="' + flowers[i].id + '">' + flowers[i].name + '</p>' + '<br/>'
+      //  );
+      //}
       alert("Login successfully.");
       window.location.href='/index.html';
     }
