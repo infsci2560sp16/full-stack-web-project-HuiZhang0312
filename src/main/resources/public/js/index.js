@@ -51,7 +51,7 @@ function postJson(){
       //    '<p class="question" id="' + flowers[i].id + '">' + flowers[i].name + '</p>' + '<br/>'
       //  );
       //}
-      alert("Login successfully.");
+      alert(" successfully.");
       window.location.href='/index.html';
     }
   });

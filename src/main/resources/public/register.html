@@ -22,12 +22,8 @@
         type : "post",
         dataType: "json",
         data:info,
-        success : function(flowers){
-          for ( var i = 0; i < flowers.length; i++) {
-            $("div.flowers").append(
-              '<p class="question" id="' + flowers[i].id + '">' + flowers[i].name + '</p>' + '<br/>'
-            );
-          }
+        success : function(){
+
           alert("register successfully.");
           window.location.href='/index.html';
         }
