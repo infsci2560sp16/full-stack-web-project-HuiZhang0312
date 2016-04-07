@@ -14,6 +14,8 @@ import static spark.Spark.get;
 import com.heroku.sdk.jdbc.DatabaseUrl;
 import org.json.JSONObject;
 import com.google.gson.Gson;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class Main {
 
@@ -77,7 +79,23 @@ public class Main {
 
     get("/showflower", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
-            attributes.put("message", "Hello World!");
+
+            SimpleDateFormat formatter = new SimpleDateFormat("EEEE");
+            String dayOfWeek = formatter.format(new Date());
+
+            ArrayList<String> weekday = new ArrayList<String>();
+            weekday.add("Rose");
+            weekday.add("Orchid");
+            weekday.add("Carnation");
+            weekday.add("Datura ");
+            ArrayList<String> weekend = new ArrayList<String>();
+            weekend.add("Fuchsia ");
+            weekend.add("Tulip ");
+            weekend.add("Peony ");
+
+            attributes.put("weekday", weekday);
+            attributes.put("weekend", weekend);
+            attributes.put("dayOfWeek", dayOfWeek);
 
             return new ModelAndView(attributes, "showflower.ftl");
         }, new FreeMarkerEngine());

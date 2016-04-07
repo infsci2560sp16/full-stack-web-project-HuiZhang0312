@@ -16,6 +16,22 @@
    <div class="logo">
      <a href="index.html"><img src="images/orchid_logo.jpg" alt=""></a>
    </div>
+   <div>
+     <h3><a href="#"><br/>Today is ${dayOfWeek}</a></h3>
+
+        <#if dayOfWeek == "Monday"|| dayOfWeek == "Wednesday"|| dayOfWeek == "Friday"||dayOfWeek == "Tuesday"|| dayOfWeek == "Thursday">
+
+        <#list 0..weekday?size-1 as i>
+        <h4>${weekday[i]}</h4>
+        </#list>
+
+        <#else>
+        <#list 0..weekend?size-1 as i>
+        <h4>${weekend[i]}</h4>
+        </#list>
+
+        </#if>
+   </div>
  </div>
  <div id="body">
    <div class="featured">
